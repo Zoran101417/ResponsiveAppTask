@@ -1,0 +1,27 @@
+<div class="col-6 offset-5 container align-content-center" (window:resize)="onResize($event)">
+
+    <div class="col-12 deviceDiv">
+      <span>This will detect a device type after you start the app!!</span><br/>
+      <br/>
+       <span *ngIf="isDesktopDevice">
+         <i class="fa fa-desktop fa-4x"></i><br/>Desktop Device
+       </span>
+      <span *ngIf="isTabletDevice">
+        <i class="fa fa-tablet fa-4x"></i><br/>Tablet Device
+      </span>
+      <span *ngIf="isMobileDevice">
+        <i class="fa fa-mobile fa-4x"></i><br/>Mobile Device
+        <br/>
+      </span>
+    </div>
+  <br/>
+  <div class="col-12">
+    <span>This will detect a device by resizing the <b>browser!!</b></span><br/>
+    <br/>
+    <div *ngIf="isMobile"><i class="fa fa-mobile fa-4x"></i><br>Mobile Device</div>
+    <div *ngIf="isTablet"><i class="fa fa-tablet fa-4x"></i><br>Tablet Device</div>
+    <div *ngIf="isDesktop"><i class="fa fa-desktop fa-4x"></i><br>Desktop Device</div>
+  </div>
+  </div>
+
+
